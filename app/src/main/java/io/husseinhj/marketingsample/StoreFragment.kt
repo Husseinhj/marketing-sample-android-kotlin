@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +36,25 @@ class StoreFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_store, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val iphone = view.findViewById<Button>(R.id.button_iphone)
+        iphone.setOnClickListener {
+            Analytics().trackEvent("1234", iphone.text.toString(), requireContext())
+        }
+
+        val galaxy = view.findViewById<Button>(R.id.button_galaxy)
+        galaxy.setOnClickListener {
+            Analytics().trackEvent("12346", galaxy.text.toString(), requireContext())
+        }
+
+        val xiaomi = view.findViewById<Button>(R.id.button_xiaomi)
+        xiaomi.setOnClickListener {
+            Analytics().trackEvent("12349", xiaomi.text.toString(), requireContext())
+        }
     }
 
     companion object {

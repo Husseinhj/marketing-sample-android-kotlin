@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +37,22 @@ class ProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val email = view.findViewById<EditText>(R.id.text_edit_email)
+
+        val login = view.findViewById<Button>(R.id.button_login)
+        login.setOnClickListener {
+            Analytics().trackLoginEvent( email.text.toString(), requireContext())
+        }
+
+        val signup = view.findViewById<Button>(R.id.button_signup)
+        signup.setOnClickListener {
+            Analytics().trackLoginEvent( email.text.toString(), requireContext())
+        }
     }
 
     companion object {

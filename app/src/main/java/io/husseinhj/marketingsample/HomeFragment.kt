@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.core.os.bundleOf
+import com.google.firebase.analytics.FirebaseAnalytics
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +38,25 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val phone = view.findViewById<Button>(R.id.button_phone)
+        phone.setOnClickListener {
+            Analytics().trackEvent("12", phone.text.toString(), requireContext())
+        }
+
+        val laptop = view.findViewById<Button>(R.id.button_laptop)
+        laptop.setOnClickListener {
+            Analytics().trackEvent("123", laptop.text.toString(), requireContext())
+        }
+
+        val car = view.findViewById<Button>(R.id.button_car)
+        car.setOnClickListener {
+            Analytics().trackEvent("1234", car.text.toString(), requireContext())
+        }
     }
 
     companion object {
