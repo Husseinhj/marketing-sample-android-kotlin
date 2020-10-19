@@ -10,4 +10,13 @@
     <string name="phone">Phone</string>
     <string name="laptop">Laptop</string>
     <string name="car">Car</string>
+    <string name="add_to_basket">Add to basket:</string>
+    <string name="iphone_12_pro">iPhone 12 Pro</string>
+    <string name="galaxy_s20">Galaxy S20</string>
+    <string name="xiaomi_redmi_note_4">Xiaomi Redmi Note 4</string>
+    <string name="search_stuff">Search stuff</string>
+    <string name="search">Search</string>
+    <string name="email_address">Email address</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
 </resources>
