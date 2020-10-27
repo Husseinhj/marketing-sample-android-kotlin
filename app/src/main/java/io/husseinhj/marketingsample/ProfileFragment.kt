@@ -51,7 +51,7 @@ class ProfileFragment : Fragment() {
 
         val signup = view.findViewById<Button>(R.id.button_signup)
         signup.setOnClickListener {
-            Analytics().trackLoginEvent( email.text.toString(), requireContext())
+            Analytics().trackSignUpEvent( email.text.toString(), requireContext())
         }
     }
 
