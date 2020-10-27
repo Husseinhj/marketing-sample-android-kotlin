@@ -5,14 +5,14 @@ It's optional to track your firebase , ... panels
 
 ## Screenshots
 
-Home:
+### Home:
 ![Home screen](/screenshots/home.png)
 
-Store:
+### Store:
 ![Store screen](/screenshots/store.png)
 
-Search:
+### Search:
 ![Search screen](/screenshots/search.png)
 
-Profile:
+### Profile:
 ![Profile screen](/screenshots/profile.png)
