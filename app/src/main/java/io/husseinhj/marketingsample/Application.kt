@@ -4,6 +4,7 @@ import android.app.Application
 import android.util.Log
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.FirebaseApp
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.messaging.FirebaseMessaging
 
@@ -16,8 +17,10 @@ class Application : Application() {
     override fun onCreate() {
         super.onCreate()
 
+        FirebaseApp.initializeApp(this)
         // Obtain the FirebaseAnalytics instance.
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
+
         this.getFirebasePushToken()
     }
 
