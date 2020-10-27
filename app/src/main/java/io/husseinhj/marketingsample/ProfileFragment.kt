@@ -53,6 +53,11 @@ class ProfileFragment : Fragment() {
         signup.setOnClickListener {
             Analytics().trackSignUpEvent( email.text.toString(), requireContext())
         }
+
+        val killMe = view.findViewById<Button>(R.id.button_crash)
+        killMe.setOnClickListener {
+            throw RuntimeException("Oh No. Some one clicked on KILL ME button")
+        }
     }
 
     companion object {

@@ -51,6 +51,14 @@
                     android:text="@string/sign_up" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button_crash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/kill_me_threw_an_exception" />
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
